@@ -16,16 +16,13 @@ public class Main {
         //Задача 2
         System.out.println("Задача 2");
 
-
-        int minSum = 0;
-        for (int i : salary) {
-            minSum = i;
-            break;
-        }
+        int minSum = salary[0];
         int maxSum = -1;
         for (int current : salary) {
             if (current > maxSum) {
                 maxSum = current;
+            } else if (current > minSum) {
+                minSum = current;
             }
         }
         System.out.println("Минимальная сумма трат за неделю составила " + minSum + " рублей. Максимальная сумма трат за неделю составила " + maxSum + " рублей");
@@ -35,13 +32,12 @@ public class Main {
         System.out.println("Задача 3");
 
         int[] spendings = {100, 55, 288, 78, 145};
-        int weeks = 4; // В месяце же 4 недели
         double avg;
         int summ = 0;
         for (int i : spendings) {
             summ += i;
         }
-        avg = (double) summ / weeks;
+        avg = (double) summ / spendings.length;
         System.out.println("Средняя сумма трат за месяц составила " + avg + " рублей");
 
 
