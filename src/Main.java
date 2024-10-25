@@ -21,7 +21,7 @@ public class Main {
         for (int current : salary) {
             if (current > maxSum) {
                 maxSum = current;
-            } else if (current > minSum) {
+            } else if (current < minSum) {
                 minSum = current;
             }
         }
